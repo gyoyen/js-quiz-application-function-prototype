@@ -1,0 +1,59 @@
+@use "base";
+@use "utilities";
+@use "variables";
+
+#quiz {
+  display: none;
+
+  div[true-answered],
+  div[false-answered] {
+    background-color: variables.$true-color;
+    display: flex;
+    justify-content: space-between;
+    i {
+      color: rgb(0, 88, 0);
+    }
+  }
+
+  div[false-answered] {
+    background-color: variables.$false-color;
+    i {
+      color: rgb(136, 0, 0);
+    }
+  }
+
+  .option-list .option.disabled {
+    pointer-events: none;
+  }
+
+  .btn-next.disabled {
+    pointer-events: none;
+  }
+}
+
+#start {
+  // display: none;
+  border: none;
+  width: auto;
+}
+
+#end.container {
+  display: none;
+  padding: 1rem 0;
+  i {
+    font-size: 9rem;
+    color: blue;
+    margin: auto;
+    line-height: normal;
+  }
+  .end-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .replay-quit {
+    button {
+      display: inline-block;
+    }
+  }
+}

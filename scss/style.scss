@@ -1,0 +1,97 @@
+@use "base";
+@use "utilities";
+@use "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.6;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  // header
+  .container-header,
+  .container-footer {
+    background-color: variables.$medium-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.7rem;
+    .app-title {
+      font-size: 2.7rem;
+      font-weight: 500;
+    }
+    .timing {
+      background-color: variables.$green-color;
+      color: white;
+      padding: 0.6rem;
+      border-radius: 1rem;
+      font-size: 1.6rem;
+      display: flex;
+      margin-right: 1rem;
+      &-seconds {
+        margin-left: 1rem;
+        background-color: variables.$yellow-color;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  //time-bar
+  .time-bar {
+    display: block;
+    background-color: variables.$medium-color;
+    width: 100%;
+    margin-bottom: 1rem;
+    &__complete {
+      height: 5px;
+      width: 0%;
+      background-color: orange;
+    }
+  }
+
+  //main
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    h2 {
+      text-align: left;
+      padding: 1rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .option {
+      margin: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  //footer
+  .container-footer {
+    .pagination {
+      background-color: variables.$red-color;
+      color: white;
+      font-size: 1.6rem;
+      padding: 0 1rem;
+      border-radius: 1rem;
+      font-weight: bold;
+    }
+  }
+}

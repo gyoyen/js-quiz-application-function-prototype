@@ -1,0 +1,59 @@
+@use "variables";
+
+.container {
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  overflow: auto;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 100%;
+}
+
+//buttons
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+.btn-outline-yellow {
+  background-color: transparent;
+  border: 1px solid rgb(161, 161, 161);
+  text-align: left;
+}
+
+.btn-gray {
+  background-color: rgb(75, 75, 75);
+  color: white;
+  border: none;
+  &:hover {
+    background-color: white !important;
+    color: rgb(75, 75, 75) !important;
+  }
+}
+
+.btn-yellow {
+  background-color: rgb(255, 243, 132);
+  color: rgb(75, 75, 75);
+  border: none;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  &:hover {
+    background-color: rgba(255, 243, 132, 0.7);
+    color: rgb(75, 75, 75) !important;
+  }
+}
+
+.btn:hover {
+  background-color: variables.$yellow-color;
+}
